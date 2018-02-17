@@ -1,0 +1,82 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.virginia.cs4720.final_project_final_sudowoodo.ListFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="75dp">
+
+        <TextView
+            android:id="@+id/textItemsBought"
+            android:paddingLeft="10dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/blackText"
+            android:text="ITEMS BOUGHT"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textListDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textItemsBought"
+            android:textColor="@color/blackText"
+            android:text="DATE"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/textListAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/blackText"
+            android:text="AMT"
+            android:textSize="30dp"/>
+
+        <ScrollView
+            android:id="@+id/sView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textItemsBought">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/totalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="TOTAL"
+            android:textAlignment="textEnd"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/totalAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="$XXX.XX"
+            android:textSize="40dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
